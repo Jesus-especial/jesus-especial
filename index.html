@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especial 10K - @Sigueme7104</title>
+    <!-- Tipografía moderna e íconos vectoriales -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        /* Reset y Centrado Absoluto Multipantalla */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f6f8fa;
+            color: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 16px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Luces celestiales desenfocadas de fondo */
+        .bg-blur-1 {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+            top: -20px;
+            left: -20px;
+            z-index: 1;
+        }
+        .bg-blur-2 {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+            bottom: -50px;
+            right: -50px;
+            z-index: 1;
+        }
+
+        /* Tarjeta de Cristal Ajustada y Perfectamente Centrada */
+        .card-container {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            max-width: 480px;
+            width: 100%;
+            padding: 35px 24px;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.05), 0 0 1px 1px rgba(255, 255, 255, 0.7) inset;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes cardEntrance {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ilustración de Jesús */
+        .jesus-vector {
+            width: 85px;
+            height: 85px;
+            margin-bottom: 12px;
+            opacity: 0.85;
+            filter: drop-shadow(0 4px 10px rgba(212, 175, 55, 0.2));
+        }
+        .jesus-vector img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Cabecera TikTok */
+        .tiktok-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #000000;
+            color: #ffffff;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            margin-bottom: 24px;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+        .tiktok-header:hover {
+            transform: scale(1.05);
+        }
+        .tiktok-header i {
+            font-size: 16px;
+            background: linear-gradient(45deg, #fe2c55, #25f4ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #0f172a;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        /* Contenedor Responsivo para Video Horizontal de YouTube (16:9 Tradicional) */
+        .youtube-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        .youtube-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .celebration-txt {
+            font-size: 14.5px;
+            color: #475569;
+            margin-bottom: 24px;
+            width: 100%;
+            line-height: 1.5;
+        }
+
+        /* Bloque del Premio */
+        .prize-glow-box {
+            background: #ffffff;
+            padding: 22px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 28px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.01);
+            position: relative;
+            width: 100%;
+        }
+        .prize-glow-box h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1;
+            background: linear-gradient(90deg, #0f172a, #d4af37, #0f172a);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShine 4s linear infinite;
+        }
+        @keyframes textShine {
+            to { background-position: 200% center; }
+        }
+        .prize-glow-box p {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #64748b;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        /* Requisitos */
+        .requirements-title {
+            font-size: 12.5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #475569;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 12px;
+            padding-left: 2px;
+            width: 100%;
+        }
+        .req-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 28px;
+            width: 100%;
+        }
+        .req-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #ffffff;
+            padding: 14px 16px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .req-card:hover {
+            transform: translateX(6px);
+            border-color: #d4af37;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.04);
+        }
+        .req-icon-box {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .icon-heart { background: #fff1f2; color: #f43f5e; }
+        .icon-share { background: #f0fdfa; color: #0d9488; }
+        .icon-comment { background: #fffbeb; color: #b45309; }
+
+        .req-text h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .req-text p {
+            font-size: 12.5px;
+            color: #64748b;
+        }
+        .quote-phrase {
+            display: inline-block;
+            background: #fdf8e6;
+            padding: 2px 8px;
+            border-radius: 6px;
+            color: #b45309;
+            font-weight: 700;
+            border: 1px solid #fde68a;
+        }
+
+        /* Sección de Vías de Pago Modificadas en Cuadrícula 4x3 */
+        .payments-section {
+            margin-bottom: 30px;
+            text-align: left;
+            width: 100%;
+        }
+        .payments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .pay-tag {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 10px 4px;
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+        .pay-tag i {
+            font-size: 14px;
+        }
+        .pay-tag:hover {
+            transform: translateY(-2px);
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+        }
+
+        /* Adaptabilidad para pantallas móviles muy compactas */
+        @media (max-width: 380px) {
+            .payments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Botón de Acción */
+        .btn-tiktok-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px;
+            border-radius: 16px;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            color: #ffffff;
+            background: #000000;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        .btn-tiktok-trigger::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+            animation: buttonPulse 2s infinite;
+        }
+        @keyframes buttonPulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3); }
+            70% { box-shadow: 0 0 0 12px rgba(0, 0, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+        }
+        .btn-tiktok-trigger:hover {
+            background: #111;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        }
+
+        /* Footer */
+        .live-footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            width: 100%;
+        }
+        .live-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fe2c55;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .live-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #fe2c55;
+            border-radius: 50%;
+            animation: livePulse 1.5s infinite;
+        }
+        @keyframes livePulse {
+            0% { transform: scale(0.9); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.4; }
+            100% { transform: scale(0.9); opacity: 1; }
+        }
+        .live-date {
+            font-size: 12.5px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-blur-1"></div>
+    <div class="bg-blur-2"></div>
+
+    <div class="card-container">
+        
+        <!-- Ilustración de Jesús -->
+        <div class="jesus-vector">
+            <img src="https://illustrations.popsy.co/amber/meditating.svg" alt="Espiritualidad">
+        </div>
+
+        <!-- Identificador Oficial de TikTok -->
+        <a href="https://www.tiktok.com/@Sigueme7104" target="_blank" class="tiktok-header">
+            <i class="ph-fill ph-tiktok-logo"></i>
+            <span>@Sigueme7104</span>
+        </a>
+        
+        <h1>Especial 10K Seguidores</h1>
+
+        <!-- REPRODUCTOR DE VIDEO HORIZONTAL (Pon aquí tu enlace de video normal) -->
+        <div class="youtube-wrapper">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        </div>
+
+        <p class="celebration-txt">Damos gracias a Dios por esta hermosa comunidad. Celebramos juntos con este bono de bendición.</p>
+
+        <!-- Bloque del Premio -->
+        <div class="prize-glow-box">
+            <h2>$90.00 USD</h2>
+            <p>Bono de Apoyo Libre</p>
+        </div>
+
+        <!-- Lista de Requisitos -->
+        <div class="requirements-title">Completa los pasos:</div>
+        <div class="req-container">
+            
+            <div class="req-card">
+                <div class="req-icon-box icon-heart">
+                    <i class="ph-bold ph-heart"></i>
+                </div>
+                <div class="req-text">
+                    <h4>Dar me gusta</h4>
+                    <p>Apoya el video de la dinámica con tu bendición.</p>
+                </div>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon-box icon-share">
+                    <i class="ph-bold ph-share-network"></i>
+                </div>
+                <div class="req-text">
+                    <h4>Compartir</h4>
+                    <p>Difunde el mensaje con tus hermanos de la red.</p>
+                </div>
+            </div>
+
+            <div class="req-card">
+                <div class="req-icon-box icon-comment">
+                    <i class="ph-bold ph-hands-praying"></i>
+                </div>
+                <div class="req-text">
+                    <h4>Comentar la frase</h4>
+                    <p>Debes comentar exactamente: <span class="quote-phrase">Te amo Jesus</span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Cuadrícula Perfecta 4x3 de Medios de Pago -->
+        <div class="payments-section">
+            <div class="requirements-title">Vías de entrega oficiales:</div>
+            <div class="payments-grid">
+                <div class="pay-tag"><i class="ph ph-credit-card"></i>PayPal</div>
+                <div class="pay-tag"><i class="ph ph-wallet"></i>Binance</div>
+                <div class="pay-tag"><i class="ph ph-globe"></i>W. Union</div>
+                <div class="pay-tag"><i class="ph ph-bank"></i>Zelle</div>
+                <div class="pay-tag"><i class="ph ph-currency-dollar"></i>BBVA</div>
+                <div class="pay-tag"><i class="ph ph-money"></i>Pichincha</div>
+                <div class="pay-tag"><i class="ph ph-coins"></i>Guayaquil</div>
+                <div class="pay-tag"><i class="ph ph-device-mobile"></i>Cash App</div>
+                <div class="pay-tag"><i class="ph ph-buildings"></i>Chase Bank</div>
+                <div class="pay-tag"><i class="ph ph-shield-check"></i>BCP</div>
+                <div class="pay-tag"><i class="ph ph-sketch-logo"></i>Bancolombia</div>
+                <div class="pay-tag"><i class="ph ph-plus-circle"></i>Otros</div>
+            </div>
+        </div>
+
+        <!-- ENLACE DEL BOTÓN PRINCIPAL (Pon aquí la URL de tu Short) -->
+        <a href="https://www.youtube.com/shorts/dQw4w9WgXcQ" target="_blank" class="btn-tiktok-trigger">
+            <i class="ph-bold ph-youtube-logo"></i>
+            Ir al Short y comentar aquí
+        </a>
+
+        <!-- Footer con los Datos del Directo -->
+        <div class="live-footer">
+            <div class="live-status">
+                <div class="live-dot"></div>
+                Sorteo en Directo por TikTok
+            </div>
+            <div class="live-date">Transmisión oficial programada para el <strong>19 de junio, 2026</strong></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
